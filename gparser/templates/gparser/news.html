@@ -1,0 +1,61 @@
+{% extends 'gparser/base.html' %}
+{% block title %} News {% endblock %}
+
+
+{% block content %}
+
+        
+
+<div class="container">
+    <div class="row">
+        {% for news in page_obj %}
+        <div class="col-md-6">
+            <div class="main">
+                <article class="articles">
+                    <div class="pic">
+                        <img class="article" src="{{ news.pic }}" alt="picture">
+                    </div>
+                    <div class="article">
+                        <p class="title"><a href="/gparser/{{ news.id }}">{{ news.title }}</a></p>
+                        <p class="source"><a href="{{ news.link }}">{{ news.link }}</a></p>
+                        <p class="date">{{ news.date }}</p>
+                    </div>   
+                </article>
+            </div>
+        </div>
+{% endfor %}
+</div>
+</div>
+
+    <div class="container">  
+        <div class="pagination">
+                <ul class="paginator">
+                    {% if page_obj.has_previous %}
+                    <li class="page-num">
+                        <a href="?page={{ page_obj.previous_page_number }}">&lt;</a>
+                    </li>
+                    {% endif %}
+
+                        {% for p in page_obj.paginator.page_range %}
+                        {% if page_obj.number == p %}
+                        <li class="page-num page-num-selected">{{ p }}</li>
+                        {% elif p >= page_obj.number|add:-4 and p <= page_obj.number|add:4  %}
+                        
+                        <li class="page-num">
+                            <a href="?page={{ p }}">{{ p }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+
+                    {% if page_obj.has_next %}
+                    <li class="page-num">
+                        <a href="?page={{ page_obj.next_page_number }}">&gt;</a>
+                    </li> 
+                    {% endif %}                   
+                </ul>
+        </div>
+    </div>
+
+{% endblock %}
+
+
