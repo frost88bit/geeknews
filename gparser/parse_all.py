@@ -281,15 +281,17 @@ def the_game_rant_tags(url_game_rant, headers):
 
     if response0.status_code == 200:
         soup = BeautifulSoup(response0.text, 'html.parser')
-        main = soup.find_all('article', 'browse-clip')
 
-        for item in main:
-            pic = item.find('source').get('srcset') or item.find('source').get('data-srcset')
-            link = item.find('a', class_='bc-title-link').get('href')
-            title = item.find('a', class_='bc-title-link').get('title')
-            date = item.find('time', class_='bc-date').get('datetime')
-            link = 'https://gamerant.com/' + link
-
+        for obj in range(1,20):
+            obj += 1
+            article_ref_class = (f'browse-clip item-{obj} js-content')
+            main = soup.find('article', article_ref_class)
+            pic = main.find('picture').find('source').get('data-srcset')
+            link = main.find('a').get('href')
+            link = 'https://gamerant.com/'+link
+            title = main.find('h3').find('a').get('title')
+            date = main.find('time', class_='bc-date').get('datetime')
+            
             try:
                 news = News.objects.get(link=link)
                 news.pic = pic
@@ -305,23 +307,27 @@ def the_game_rant_tags(url_game_rant, headers):
                     title=title,
                     date=date,
                 ).save()
-            
 
-    for page in range(1,8):
+
+    for page in range(1,3):
         page += 1
-        url1 = url_the_gamer+str(page)
+        url1 = url_game_rant+str(page)
         response = requests.get(url1, headers=headers)
 
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
             main = soup.find_all('article', 'browse-clip')
 
-            for item in main:
-                pic = item.find('source').get('srcset') or item.find('source').get('data-srcset')
-                link = item.find('a', class_='bc-title-link').get('href')
-                title = item.find('a', class_='bc-title-link').get('title')
-                date = item.find('time', class_='bc-date').get('datetime')
-                link = 'https://gamerant.com/'+link
+            for obj in range(1, 20):
+                obj += 1
+                article_ref_class = (f'browse-clip item-{obj} js-content')
+                main = soup.find('article', article_ref_class)
+                pic = main.find('picture').find('source').get('data-srcset')
+                link = main.find('a').get('href')
+                link = 'https://gamerant.com/' + link
+                title = main.find('h3').find('a').get('title')
+                date = main.find('time', class_='bc-date').get('datetime')
+
             try:
                 news = News.objects.get(link=link)
                 news.pic = pic
@@ -337,7 +343,7 @@ def the_game_rant_tags(url_game_rant, headers):
                     title=title,
                     date=date,
                 ).save()
-            
+         
 def done():
     print('Data was collected')
 

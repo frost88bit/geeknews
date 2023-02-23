@@ -11,7 +11,7 @@ from.helpers import (wcc_details,
                       pc_gamer_details,
                       t_hardware_details,
                       the_gamer_details,
-                      game_rant_details
+                      game_rant_details,
                       )
 
 

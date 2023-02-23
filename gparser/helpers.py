@@ -70,12 +70,13 @@ def the_gamer_details(news, headers):
     if response.status_code == 200:
         soup = BeautifulSoup(response.text, 'html.parser')
         header = soup.find_all('h1')
-        pic = soup.find_all('picture')
+        pic = soup.find('figure').find('picture').find('source').get('srcset')
         body = soup.find_all('section', id='article-body')
-        sum_=(str(header)+str(pic)+str(body))
+        
+        sum_=(str(header)+str(body))
         sum_ = sum_.translate({ord('['): None})
         sum_ = sum_.translate({ord(']'): None})
-        return{'sum':sum_}
+        return{'pic':pic, 'sum':sum_}
 
 
 def game_rant_details(news, headers):
@@ -85,12 +86,13 @@ def game_rant_details(news, headers):
     if response.status_code == 200:
         soup = BeautifulSoup(response.text, 'html.parser')
         header = soup.find_all('h1')
-        pic = soup.find_all('picture')
+        pic = soup.find('figure').find('picture').find('source').get('srcset')
         body = soup.find_all('section', id='article-body')
-        sum_=(str(header)+str(pic)+str(body))
+        
+        sum_=(str(header)+str(body))
         sum_ = sum_.translate({ord('['): None})
         sum_ = sum_.translate({ord(']'): None})
-        return{'sum':sum_}
+        return{'pic':pic, 'sum':sum_}
 
 if __name__ == '__main__':
     pass

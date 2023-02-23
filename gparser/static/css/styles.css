@@ -326,6 +326,16 @@ div.toms_all h1{
     text-align: center;
 }
 
+div.swiper-slide {
+    padding-left: 200px;
+}
+
+strong a img{
+    max-width: 960px;
+    max-height: 540px;
+}
+
+
 
 /* THE GAMER */
 div.the_gamer_all h1.heading_title{
@@ -343,20 +353,28 @@ div.the_gamer_all img {
    max-height: 500px;  
 }
 
+div.the_gamer_pic img {
+    padding-left: 75px;
+}
 
 /* GAMERANT */
 
-div.gamerant_all h1.heading_title{
+div.grant_all h1.heading_title{
     color: rgb(254, 249, 222);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center; 
 }
 
-div.gamerant_all h1.hide, div.body-img {
+div.grant_all h1.hide, div.body-img {
     display: none;
 }
 
-div.gamerant_all img {
+div.grant_all img {
    max-width: 1000px;
    max-height: 500px;  
 }
+
+div.grant_pic img {
+    padding-left: 75px;
+}
+
