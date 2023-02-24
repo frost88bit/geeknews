@@ -253,6 +253,11 @@ h2.tablepress-table-name {
     font-size: 16px;
  }
 
+ div.main_wcc a {
+    color: rgb(128, 0, 255) !important; 
+    font-family: 'Papyrus' !important; 
+ }
+
 
 
 /* GRADAR */
@@ -301,6 +306,12 @@ div.gr_head {
     font-size: 16px; 
   }
 
+  div.gr_body a{
+    color: rgb(128, 0, 255) !important; 
+    font-family: 'Papyrus' !important; 
+  }
+
+
 
 /* PC-GAMER */
 div.pcg_all h1 {
@@ -316,6 +327,12 @@ div.image-full-width-wrapper {
 div.remixd-audioplayer__svg-wrapper {
     display: none;
 }
+
+div.pcg_all a {
+    color: rgb(128, 0, 255) !important; 
+    font-family: 'Papyrus' !important; 
+}
+
 
 
 /* TOMS-HARDWARE */
@@ -333,6 +350,11 @@ div.swiper-slide {
 strong a img{
     max-width: 960px;
     max-height: 540px;
+}
+
+div.toms_all a {
+    color: rgb(128, 0, 255) !important; 
+    font-family: 'Papyrus' !important;  
 }
 
 
@@ -357,6 +379,12 @@ div.the_gamer_pic img {
     padding-left: 75px;
 }
 
+div.the_gamer_all a {
+    color: rgb(128, 0, 255) !important; 
+    font-family: 'Papyrus' !important;  
+} 
+
+
 /* GAMERANT */
 
 div.grant_all h1.heading_title{
@@ -377,4 +405,10 @@ div.grant_all img {
 div.grant_pic img {
     padding-left: 75px;
 }
+ 
+div.grant_all a {
+    color: rgb(128, 0, 255);
+    font-family: 'Papyrus';
+}
+
 
