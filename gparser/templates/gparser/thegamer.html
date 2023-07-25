@@ -1,0 +1,12 @@
+{% extends 'gparser/base.html' %}
+
+{% block title %} Article {% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="the_gamer_pic"> <img src="{{ result.pic|safe }}" alt="main"></div>
+    <div class="the_gamer_all">{{ result.sum|safe }}</div>
+
+</div>
+
+{% endblock %}

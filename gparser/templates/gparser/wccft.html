@@ -1,0 +1,12 @@
+{% extends 'gparser/base.html' %}
+
+{% block title %} Article {% endblock %}
+
+{% block content %}
+<div class="container">
+   <h1 class="wccft">{{result.title|safe}}</h1>
+   <div class="wccft_title_pic">{{result.pic|safe}}</div>
+   <div class="main_wcc">{{result.all_paragraphs|safe}}</div>
+</div>
+
+{% endblock %}

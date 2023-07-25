@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no ">
+    <title>{% block title %}{% endblock %} | GeekNews</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-grid.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="shortcut icon" href="{% static '/pic/favicon.png' %}" type="image/png">
+</head>
+    <header>
+        <div class="container">
+            <img id="head" src="{% static 'pic/header.jpg' %}" alt=header_pic>
+        </div>
+            
+        <div class="container">
+            
+            <div class="header">
+                <div class="row">
+                <div class="col-md-6">   
+                    <div class="logo_pic">
+                        <a href="../gparser/"><img src="{% static '/pic/logo.gif' %}" alt="logo"></a>
+                    </div>
+                </div> 
+
+                <div class="col-md-6">
+                    <div class="d-flex">    
+                    <form class="d-flex" method=POST action="{% url 'search-news' %}">
+                        {% csrf_token %}
+                        <input class="search_field" type="search" placeholder="Search News" aria-label="Search" name = "searched">
+                        <button class="btn btn-outline-secondary" type="submit">Search</button>
+                    </form>
+                    </div> 
+                </div>
+
+            </div>
+            </div>
+        </div>
+    </header>
+            
+            <body>
+                {% block content %}
+                {% endblock %}     
+            </body>
+            
+    <footer>
+        <div class="container-fluid">
+            
+            <div class="footer">
+                <div class="container">
+                <span id="usd_data"><p>Data is used only for personal purpose</p></span>
+                
+                <div class="social">
+                    <p>Social</p>
+                    <a href="https://www.linkedin.com/in/%D0%BEleksandr-rostov/"><img id="linkedin" src="{% static '/pic/linkedin.png' %}" alt="linkedin"></a>
+                    <a href="https://github.com/frost88bit/geeknews"><img src="{% static '/pic/github.png' %}" alt="github"></a>
+                </div>
+
+                
+                <div class="ftsources">
+                    <p>Sources</p> 
+                    <a href="https://wccftech.com/"><img src="{% static '/pic/wccft.jpg' %}" alt="wccft"></a>
+                    <a href="https://www.gamesradar.com/uk/"><img src="{% static '/pic/gamesradar.png' %}" alt="gamesradar"></a>
+                    <a href="https://www.pcgamer.com/uk/"><img src="{% static '/pic/pcgamer.png' %}" alt="pcgamer"></a>
+                    <a href="https://www.tomshardware.com/"><img src="{% static '/pic/toms.jpg' %}" alt="toms.jpg"></a>
+                </div>
+
+                
+                <div class="addftsources">
+                    <p>Additional sources</p>
+                    <a href="https://www.thegamer.com/"><img src="{% static '/pic/TheGamer.png' %}" alt="thegamer"></a>
+                    <a href="https://gamerant.com/"><img src="{% static '/pic/gamerant.png' %}" alt="gamerant"></a>
+                </div>
+                <div id="creator">
+                <p>Oleksandr Rostov Project 2023</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</html>

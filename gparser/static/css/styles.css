@@ -1,0 +1,510 @@
+/* main page */
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    }
+    
+    img#head{
+        max-width: 1296px;
+        padding: 0px;
+        border-radius: 1.2rem;  
+    }
+    
+ 
+    div.logo_pic img {
+        border-radius: 1.2rem;
+    }
+    
+    div.d-flex{
+        padding-left: 180px;
+    }
+
+    input.search_field {
+        border-radius: 0.8cqmax;
+        padding-left: 25px; 
+        height: 40px;
+        width: 380px;
+        text-align: left;
+        font-size: 16px;
+        margin-top: 40px; 
+    }
+    
+    button.btn {
+        font-size: 19px;
+        padding-top: 2px;
+        padding-bottom: 3px;
+        border-radius: 0.7cqmax;
+        margin-top: 40px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
+    }
+
+    button.btn:hover {
+        background: #0a0c0d;
+        color: blueviolet;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    }
+    
+    body {
+        background-color: #0a0c0d;
+        background-position:center;
+        background-size: 4000px 1400px;
+        border-radius: 1.2rem;
+    }
+    
+    
+    div.pic {
+        width: 300px;
+        box-sizing: border-box;
+        display: flex;
+        margin: 10px;
+    }
+    
+    img.article {
+        margin-left: 30px;
+        width: 200px;
+        border-radius: 1.2rem;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        height: fit-content;
+    
+    }
+    article.articles {
+        display: flex;
+        max-width: 700px;
+        justify-content: center;
+    }
+    
+    div.article p.title {
+        padding-top: 40px;
+    }
+    
+    div.article p.title a{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(255, 217, 0);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 900;   
+    }
+    
+    div p.source a{
+        color: rgb(128, 0, 255);
+        font-family: 'Papyrus';
+        line-height: 26px;
+        box-sizing: border-box;
+        font-weight: 500;
+     
+    }
+    
+    div p.date {
+        color: rgb(255, 217, 0);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 16px;
+    }
+    
+    div.footer {
+        background-color: rgb(0, 0, 0);
+
+    }
+    
+    ul.paginator li {
+        display: inline;
+        margin-right: 1px;
+        color: rgb(128, 0, 255);
+        text-decoration: none;
+        box-sizing: border-box;
+        font-size: 24px;
+        font-weight: bold;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+    ul.paginator {
+        text-align: center;
+    }
+
+    li.page-num a {
+        font-size: 20px;
+        text-decoration: none;
+        color: rgb(255, 217, 0);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    }
+
+    footer {
+        margin-top: -200;
+        bottom: 0;
+    }
+    
+    span#usd_data p{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+        color: rgb(255, 217, 0);
+        padding: 20px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    div.social{
+        margin-left: 595px;
+    }
+
+    div.social p {
+        color: rgb(255, 217, 0);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+        font-size: 16px;
+        text-align: left; 
+        padding: 5px;
+        padding-left: 25px;
+    }
+
+    div.social img {
+        max-width: 50px;
+        padding-right: 10px;
+    }
+    
+    div.ftsources p {
+        color: rgb(255, 217, 0);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    }
+    div.ftsources img {
+        max-height: 50px;
+        padding-right: 10px;
+    }
+    
+    div.addftsources p {
+        color: rgb(255, 217, 0);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    }
+
+    div.addftsources img{
+        max-height: 50px;
+        padding-right: 10px;
+    }
+
+    div#creator p {
+        color: rgb(255, 217, 0);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 50px; 
+    }
+    
+
+
+/* SEARCH NEWS */
+h1.search {
+    color: rgb(255, 217, 0);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+li.search a {
+    color: rgb(255, 217, 0);
+    font-family: 'Papyrus';
+    font-weight: bolder;
+    font-size: 25px;
+    padding-bottom: 20px; 
+}
+
+li.search a:hover{
+    color: rgb(128, 0, 255);   
+}
+
+
+
+/* WCCFT */
+h1.wccft, h1 {
+    color: rgb(254, 249, 222);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+div.wccft_title_pic {
+    text-align: center;
+}
+
+div.share-single {
+    max-width: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    color: rgb(236, 234, 219);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+h2, h3, h4, h5 {
+    color: rgb(236, 234, 219);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 22px;
+    text-align: center;  
+}
+
+div.wp-lightbox a img, figure.wp-lightbox a img, img.wp-image-1432782  {
+    width: 1000px;
+    height: 720px;
+    height: fit-content;
+    
+}
+
+table {
+    padding-left: 300px;
+}
+
+h2.tablepress-table-name {
+    padding-left: 400px;
+}
+
+ tr, th {
+    color: rgb(236, 234, 219);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px; 
+ }
+
+ div.story-share-bottom {
+    display: none;
+ }
+
+ div.wccft a, span, strong {
+    font-size: 16px;
+ }
+
+ div.main_wcc a {
+    color: rgb(128, 0, 255) !important; 
+    font-family: 'Papyrus' !important; 
+ }
+
+ div.main_wcc p {
+    padding-left: 150px;
+    padding-right: 150px;
+ }
+
+div.story-share {
+    display: none;
+}
+
+div.twitter-tweet {
+    margin-left: 400px;  
+}
+
+div.story-related {
+    display: none;
+}
+
+span.gallery-counter {
+    display: none;
+}
+
+figure {
+    text-align: center;
+        
+}
+
+ul{
+    padding-left: 150px;
+    text-align: left;
+}
+
+li {
+    font-size: 15px;
+    text-align: left;
+}
+
+div.swiper-wrapper div.swiper-slide {
+padding-left: 0px;
+}
+
+
+
+/* GRADAR */
+
+div.gr_head {
+    color: rgb(254, 249, 222);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+ div.hero-image-padding{
+    padding-top: 20px !important;
+    padding-left: 160px;
+ }
+
+ img.endorsement-hero-image{
+    display: none;
+ }
+ aside.hawk-nest {
+    display: none;
+ }
+
+ ul, strong {
+    color: rgb(254, 249, 222);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
+ div.slice-container {
+    display: none;
+ }
+
+ p.vanilla-image-block {
+    padding-top: 0px !important;
+ }
+  span.credit {
+    display: none;
+  }
+
+  span, p {
+    color: rgb(236, 234, 219);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px; 
+  }
+
+  div.icon icon-plus_circle _hawk {
+    color: rgb(236, 234, 219);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px; 
+  }
+
+  div.gr_body a{
+    color: rgb(128, 0, 255) !important; 
+    font-family: 'Papyrus' !important;
+    font-size: 18px;  
+  }
+
+  div#article-body {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  div.video-aspect-box {
+    display: none;
+  }
+
+
+/* PC-GAMER */
+div.pcg_all h1 {
+    color: rgb(254, 249, 222);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+div.image-full-width-wrapper {
+    display: none;
+}
+
+div.remixd-audioplayer__svg-wrapper {
+    display: none;
+}
+
+div.pcg_all a {
+    color: rgb(128, 0, 255) !important; 
+    font-family: 'Papyrus' !important;
+    font-size: 18px;  
+}
+
+p.strapline {
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+div.hawk-deal-widget-container {
+    display: none;
+} 
+
+
+/* TOMS-HARDWARE */
+
+div.toms_all h1{
+    color: rgb(254, 249, 222);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+div.swiper-slide {
+    padding-left: 200px;
+}
+
+strong a img{
+    max-width: 960px;
+    max-height: 540px;
+    height: fit-content;
+}
+
+div.toms_all a {
+    color: rgb(128, 0, 255) !important; 
+    font-family: 'Papyrus' !important;
+    font-size: 18px;   
+}
+
+span.see-more__button {
+    display: none;
+}
+
+
+/* THE GAMER */
+div.the_gamer_all h1.heading_title{
+    color: rgb(254, 249, 222);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center; 
+}
+
+div.the_gamer_all h1.hide, div.body-img {
+    display: none;
+}
+
+div.the_gamer_all img {
+   max-width: 1000px;
+   max-height: 500px;
+   height: fit-content;  
+}
+
+div.the_gamer_pic img {
+    padding-left: 75px;
+}
+
+div.the_gamer_all a {
+    color: rgb(128, 0, 255) !important; 
+    font-family: 'Papyrus' !important;  
+} 
+
+div.the_gamer_all {
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+div.ad-current {
+    display: none;
+}
+
+/* GAMERANT */
+
+div.grant_all h1.heading_title{
+    color: rgb(254, 249, 222);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center; 
+}
+
+div.grant_all h1.hide, div.body-img {
+    display: none;
+}
+
+div.grant_all img {
+   max-width: 1000px;
+   max-height: 500px;
+   height: fit-content;  
+}
+
+div.grant_pic img {
+    padding-left: 75px;
+}
+ 
+div.grant_all a {
+    color: rgb(128, 0, 255);
+    font-family: 'Papyrus';
+    font-size: 18px; 
+}
+
+div.grant_all {
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+/* IGN */
+
